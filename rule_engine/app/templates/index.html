@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rule Engine Interface - Create and evaluate rules with JSON data">
+    <title>Rule Engine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #555;
+        }
+        
+        .card {
+            border-radius: 8px;
+            padding: 20px;
+            background: #ffffff;
+            transition: transform 0.2s;
+        }
+        
+        .card:hover {
+            transform: scale(1.02);
+        }
+        
+        .form-section {
+            margin-bottom: 20px;
+        }
+        
+        .label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.2s;
+        }
+        
+        .input-field:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            background-color: #007bff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            flex: 1; /* Make buttons responsive */
+            margin: 0 5px; /* Add space between buttons */
+        }
+        
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        
+        .result-section {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #f9f9f9;
+        }
+        
+        @media (max-width: 600px) {
+            .button-container {
+                flex-direction: column;
+            }
+            
+            .btn {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Rule Engine</h1>
+            <p class="subtitle">Create and evaluate rules using JSON data</p>
+        </header>
+        <section class="card animated-card">
+            <form id="create-rule-form" class="form-section">
+                <div class="form-group">
+                    <label for="rule" class="label">Create Rule</label>
+                    <input
+                        type="text"
+                        id="rule"
+                        name="rule"
+                        placeholder="Enter your rule expression"
+                        required
+                        class="input-field"
+                    >
+                </div>
+            </form>
+            <form id="evaluate-rule-form" class="form-section">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="ast" class="label">AST (JSON format)</label>
+                        <textarea
+                            id="ast"
+                            name="ast"
+                            placeholder="Enter AST in JSON format"
+                            required
+                            class="input-field"
+                        ></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="data" class="label">Data (JSON format)</label>
+                        <textarea
+                            id="data"
+                            name="data"
+                            placeholder="Enter data in JSON format"
+                            required
+                            class="input-field"
+                        ></textarea>
+                    </div>
+                </div>
+            </form>
+            <div class="button-container">
+                <button form="create-rule-form" type="submit" class="btn">Create Rule</button>
+                <button form="evaluate-rule-form" type="submit" class="btn">Evaluate Rule</button>
+            </div>
+        </section>
+        <section id="result" class="result-section" aria-live="polite"></section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
