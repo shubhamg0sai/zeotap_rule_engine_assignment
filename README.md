@@ -75,6 +75,10 @@ evaluate_rule(data): Evaluates the combined AST against the provided data.
 - SQLite (Database)
 
 ### Build and installation
+ ```bash
+   cd zeotap_rule_engine_assignment
+   cd rule_engine
+   ```
 1. **Create a virtual environment**:
    ```bash
    python -m venv venv
