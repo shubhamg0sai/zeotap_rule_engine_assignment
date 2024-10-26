@@ -77,6 +77,7 @@ evaluate_rule(data): Evaluates the combined AST against the provided data.
 ### Build and installation
 1. **Clone the Repository**
  ```bash
+   git clone https://github.com/shubhamg0sai/zeotap_rule_engine_assignment.git
    cd zeotap_rule_engine_assignment
    cd rule_engine
    ```
