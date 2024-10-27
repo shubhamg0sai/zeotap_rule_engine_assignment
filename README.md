@@ -128,21 +128,8 @@ Input a Query to Evaluate:
 <hr/>
 ## Working:
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Player</title>
-</head>
-<body>
-    <h1>My Video</h1>
-    <video width="600" controls>
-        <source src="https://github.com/shubhamg0sai/zeotap_rule_engine_assignment/raw/refs/heads/Delete/rule_engine/rule_engine.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</body>
-</html>
+[![Watch the video](https://raw.githubusercontent.com/shubhamg0sai/zeotap_rule_engine_assignment/refs/heads/Delete/rule_engine/Screenshot%202024-10-27%20112046.png)](https://github.com/shubhamg0sai/zeotap_rule_engine_assignment/raw/refs/heads/Delete/rule_engine/rule_engine.mp4)
+
 
 
 
