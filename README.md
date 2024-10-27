@@ -127,5 +127,4 @@ Input a Query to Evaluate:
   ```
 <hr/>
 ## Working:
-
-https://github.com/shubhamg0sai/zeotap_rule_engine_assignment/raw/refs/heads/Delete/rule_engine/rule_engine.mp4
+![](https://raw.githubusercontent.com/shubhamg0sai/zeotap_rule_engine_assignment/raw/refs/heads/Delete/rule_engine/rule_engine.mp4)
